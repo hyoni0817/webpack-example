@@ -10,4 +10,12 @@ module.exports = {
     filename: "index_bundle.js",
     //내가 원하는 파일 이름 적어주기.
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ["css-loader"],
+      },
+    ],
+  },
 };
