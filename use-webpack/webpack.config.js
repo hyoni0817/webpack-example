@@ -28,6 +28,12 @@ module.exports = {
     new HtmlWebapckPlugin({
       template: "./source/index.html", //어떤 파일을 템플릿으로 할지 결정
       filename: "./index.html", //최종적인 파일명
+      chunks: ["index"], //삽입하고 싶은 entry의 이름과 똑같은 것을 넣어주면 된다.
+    }),
+    new HtmlWebapckPlugin({
+      template: "./source/about.html", //어떤 파일을 템플릿으로 할지 결정
+      filename: "./about.html", //최종적인 파일명
+      chunks: ["about"], //삽입하고 싶은 entry의 이름과 똑같은 것을 넣어주면 된다.
     }),
   ],
 };
