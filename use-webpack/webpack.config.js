@@ -1,4 +1,5 @@
 const path = require("path");
+const HtmlWebapckPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -23,4 +24,10 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebapckPlugin({
+      template: "./source/index.html", //어떤 파일을 템플릿으로 할지 결정
+      filename: "./index.html", //최종적인 파일명
+    }),
+  ],
 };
